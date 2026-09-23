@@ -1,0 +1,6 @@
+streamlit
+streamlit-mic-recorder
+openai
+openai-whisper
+notion-client
+python-dotenv

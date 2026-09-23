@@ -1,0 +1,98 @@
+[
+  {
+    "id": "e30614e1-4d31-4e4b-976a-46125a431700",
+    "created_at": "2026-09-19 12:39",
+    "source_text": "I have to accept what I want to happen.",
+    "done": false,
+    "notion_page_id": null,
+    "intent": "summary",
+    "title": "Acceptance",
+    "priority": "high",
+    "action_platform": "n/a",
+    "summary_or_caption": "Accept the idea or desire expressed to occur. This is often associated with actions like signing a contract or agreeing on what is about to happen. It represents a decision made about future actions."
+  },
+  {
+    "id": "d8d4f455-4fb1-4766-9b96-093b63bdc8d4",
+    "created_at": "2026-09-19 12:41",
+    "source_text": "I need to accept everything I don't want it to happen. Like sometimes I will see some actions from behaviors from people in my environment. I don't want to see these behaviors, but I can't do anything about it. So I just have to accept it. I just have to let it go. That's where I have to learn in this.",
+    "done": false,
+    "notion_page_id": null,
+    "intent": "task",
+    "title": "accept unwanted actions",
+    "priority": "high",
+    "action_platform": "notion",
+    "summary_or_caption": "I need to accept all the actions that I don't want to happen in my environment."
+  },
+  {
+    "id": "80212b06-7d57-4d0f-ab23-f0ef37fc59f2",
+    "created_at": "2026-09-19 18:53",
+    "source_text": "لازم نين وجد البسطي ووجد ورقيا ترد ونشارط",
+    "done": false,
+    "notion_page_id": null,
+    "intent": "content_creation",
+    "action_platform": "trello",
+    "summary_or_caption": "لقد وجدت البسطي وبعض الورق، وساهمت في البحث والتعرف، وطلب ترقيم ورقيا تم إرساله لبيانات جديدة ورقيّة. سترد هذا الاختيار في وعود ونصائح من سائق نسخ الورق.",
+    "priority": "medium",
+    "title": "لازم نين وجد البسطي ووجد ورقيا ترد ونشارط"
+  },
+  {
+    "id": "d741d9dd-b4c3-4415-9116-a7e1eacfd975",
+    "created_at": "2026-09-19 18:53",
+    "source_text": "I have to prepare myself, I have to prepare my clothes, my outfits, or tomorrow and my important papers like the residence card and everything else I need, like my, I don't know, I would ask about, yeah, I have to, I have to find my pictures that I will need them tomorrow and shall we?",
+    "done": false,
+    "notion_page_id": null,
+    "intent": "summary",
+    "title": "Preparing for tomorrow",
+    "priority": "high",
+    "action_platform": "trello",
+    "summary_or_caption": "Today I will find my important papers today and prepare my clothes, my outfits, or tomorrow and the important papers like the residence card and everything else. I will ask about my pictures, I don't know, and I have to find my pictures, all to keep the papers organized."
+  },
+  {
+    "id": "931b5248-9e12-4c0f-b3a1-bdf4137dde73",
+    "created_at": "2026-09-21 20:11",
+    "source_text": "Yeah, you have to start with my app. Then we go back to my final project here because I have stopped in the computer vision last time. Last time I don't know last time, maybe. And then we'll go back to our novel. Inshallah. That's it.",
+    "done": false,
+    "notion_page_id": null,
+    "intent": "summary",
+    "title": "summary of the user's text",
+    "priority": "medium",
+    "action_platform": "notion",
+    "summary_or_caption": "User recommends starting a project and going back to a last project. The user has mentioned that they will start with their application followed by their final project. The user is optimistic that it will have a good completion."
+  },
+  {
+    "id": "49d4eaa8-cfeb-478e-8c40-203050522f16",
+    "created_at": "2026-09-22 15:40",
+    "source_text": "L3 is an easy year, I will be an excellent student in short life, everything is going well, everything is going in high performance, it will be an organized in my time, I will attend all lectures, everything will be okay in short life, I am so excited for this study in a year.",
+    "done": false,
+    "notion_page_id": null,
+    "intent": "summary",
+    "title": "An easy year in high performance in the short life",
+    "priority": "high",
+    "action_platform": "notion",
+    "summary_or_caption": "You just found out that you are an excellent student in a short year. In short life, everything is going well. Everything is going in high performance, you just finished your lectures. You are so excited for the year ahead. You are so great. "
+  },
+  {
+    "id": "cd92cf0d-e2f9-479b-9233-1bd5133203be",
+    "created_at": "2026-09-22 15:48",
+    "source_text": "Everything will be okay, I will be next month to attention on life. You will be so easy, so funny, so happy.",
+    "done": false,
+    "notion_page_id": null,
+    "intent": "content_creation",
+    "summary_or_caption": "Everyone is having a great time, and I have great news. You will be so easy, so fun, and so happy with your participation. Let's support each other, and life will be wonderful on our side. #Congratulations, #Wellcome",
+    "priority": "high",
+    "title": "Everything will be okay, I will be next month to attention o",
+    "action_platform": "notion"
+  },
+  {
+    "id": "4aaa6fc0-09f5-4af5-b027-aa54bd73f507",
+    "created_at": "2026-09-22 15:56",
+    "source_text": "It will be successful here with a good mentality, a good feelings and everything The goal is best to remain silent. Gives me a strength, pain, prevent and cleanse, and withstand fatigue. The cross is not about 2002, siempre time limits Chanda formation.",
+    "done": false,
+    "notion_page_id": "3e32d743-bb11-8169-b2b7-f25c8bf28ed5",
+    "intent": "content_creation",
+    "title": "best way to stay strong when faced with challenges",
+    "priority": "high",
+    "action_platform": "notion",
+    "summary_or_caption": "Stay strong, focused when facing challenges. Follow the 2002 time limits, Chanda formation. Cross over."
+  }
+]
