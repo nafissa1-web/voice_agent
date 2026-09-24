@@ -4,3 +4,4 @@ missions.json
 __pycache__/
 *.pyc
 temp_voice.wav
+*.pt 
