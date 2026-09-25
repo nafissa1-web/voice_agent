@@ -14,12 +14,24 @@ SYSTEM_PROMPT = (
     "by the text.\n"
     "Schema:\n"
     "{\n"
-    '  "intent": "task" | "content_creation" | "summary",\n'
+    '  "intent": "task" | "content_creation",\n'
     '  "title": "short summary of the request, in the same language as the input",\n'
     '  "priority": "high" | "medium" | "low",\n'
     '  "action_platform": "notion" | "instagram" | "trello",\n'
     '  "summary_or_caption": "a detailed, helpful text related to the input, same language as input"\n'
-    "}"
+    "}\n"
+    "There are only two possible intents:\n"
+    '- "task": something the user needs to DO, remember, or act on (a reminder, an errand, '
+    "a to-do, scheduling something, following up with someone).\n"
+    '- "content_creation": something the user wants WRITTEN or MADE (a caption, a post, a '
+    "message draft, an idea for content).\n"
+    "If the input is ambiguous, pick whichever of the two is the closer fit — never leave it "
+    "as anything else.\n"
+    "Examples:\n"
+    'Input: "remind me to call the supplier tomorrow" -> intent: "task"\n'
+    'Input: "write me a caption for my new product photo" -> intent: "content_creation"\n'
+    'Input: "I need to email the client about the invoice" -> intent: "task"\n'
+    'Input: "give me an instagram post idea about our sale" -> intent: "content_creation"'
 )
 
 
@@ -42,8 +54,10 @@ def analyze_text(user_speech_text: str) -> dict:
         data = json.loads(content)
 
         # Normalize/validate so a malformed LLM response can never crash the UI.
-        if data.get("intent") not in {"task", "content_creation", "summary"}:
-            data["intent"] = "summary"
+        # Only two intents exist now; default to "task" (the safer bucket to review)
+        # instead of silently dumping everything unrecognized into a catch-all.
+        if data.get("intent") not in {"task", "content_creation"}:
+            data["intent"] = "task"
         if data.get("priority") not in {"high", "medium", "low"}:
             data["priority"] = "medium"
         data.setdefault("title", user_speech_text[:60] or "بدون عنوان")

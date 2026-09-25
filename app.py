@@ -1,4 +1,12 @@
+"""
+Voice-to-Insight AI Agent
+--------------------------
+Record your voice -> transcribe locally with Whisper -> understand intent
+with a local LLM (Ollama/Qwen) -> store it as a "mission" you can browse and
+manage -> optionally push it straight into a Notion database.
 
+Run with: streamlit run app.py
+"""
 
 from dotenv import load_dotenv
 load_dotenv()
@@ -14,10 +22,11 @@ from core.notion_sync import notion_configured, push_to_notion
 st.set_page_config(page_title="Voice-to-Insight AI Agent", page_icon="🎙️", layout="wide")
 
 st.title("🎙️ المساعد الصوتي الذكي (Local Whisper + Qwen + Notion)")
-st.caption("سجّل صوتك، ثم يُحفظ كمهمة يمكنك متابعتها أو إرسالها إلى Notion.")
+st.caption("سجّلي صوتك، Whisper يفرّغه محلياً، Qwen يحلله، ثم يُحفظ كمهمة يمكنك متابعتها أو إرسالها إلى Notion.")
 
 # ---------------------------------------------------------------------------
-# Sidebar: mission log 
+# Sidebar: mission log (this is what lets you "come back and see your
+# missions easily" instead of losing every result the moment you refresh).
 # ---------------------------------------------------------------------------
 with st.sidebar:
     st.header("🗂️ سجل المهام (Missions)")
@@ -28,8 +37,8 @@ with st.sidebar:
     else:
         intent_filter = st.multiselect(
             "تصفية حسب النوع",
-            options=["task", "content_creation", "summary"],
-            default=["task", "content_creation", "summary"],
+            options=["task", "content_creation"],
+            default=["task", "content_creation"],
         )
         show_done = st.checkbox("عرض المهام المنجزة", value=True)
 
@@ -72,7 +81,7 @@ with st.sidebar:
 
     st.divider()
     if not notion_configured():
-        st.warning("Notion غير مُفعّل. أضف NOTION_TOKEN و NOTION_DATABASE_ID في ملف .env")
+        st.warning("Notion غير مُفعّل. أضيفي NOTION_TOKEN و NOTION_DATABASE_ID في ملف .env")
     else:
         st.success("Notion متصل ✅")
 
@@ -129,7 +138,7 @@ with col2:
             st.subheader("البيانات المهيكلة (JSON)")
             st.json(insights)
 
-            intent = insights.get("intent", "summary")
+            intent = insights.get("intent", "task")
             platform = str(insights.get("action_platform", "notion")).upper()
             title = insights.get("title", "تحليل جديد")
             priority = str(insights.get("priority", "medium")).upper()
@@ -145,4 +154,4 @@ with col2:
 
             st.caption("✔️ تم حفظ هذه المهمة تلقائياً في سجل المهام على اليسار.")
     else:
-        st.info("💡 سجّل جملة لترى النتيجة هنا، وستُحفظ تلقائياً في سجل المهام على اليسار.")
+        st.info("💡 سجّلي جملة لترى النتيجة هنا، وستُحفظ تلقائياً في سجل المهام على اليسار.")

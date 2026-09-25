@@ -94,5 +94,53 @@
     "priority": "high",
     "action_platform": "notion",
     "summary_or_caption": "Stay strong, focused when facing challenges. Follow the 2002 time limits, Chanda formation. Cross over."
+  },
+  {
+    "id": "e09ac571-7dfc-449a-8618-1f0d43acd5e9",
+    "created_at": "2026-09-24 14:33",
+    "source_text": "Remind me to call my teacher tomorrow.",
+    "done": false,
+    "notion_page_id": "3e52d743-bb11-8140-a2f1-f622a2d965c8",
+    "intent": "task",
+    "title": "Remind someone to call their teacher",
+    "priority": "medium",
+    "action_platform": "notion",
+    "summary_or_caption": "Requesting someone to call their teacher for reminders"
+  },
+  {
+    "id": "146f1d35-43eb-4af0-8c54-3e61f1056b1c",
+    "created_at": "2026-09-24 14:37",
+    "source_text": "Let's start. Remind me to call my teacher tomorrow.",
+    "done": false,
+    "notion_page_id": "3e52d743-bb11-816d-99a8-f270a467d523",
+    "intent": "summary",
+    "priority": "high",
+    "action_platform": "notion",
+    "summary_or_caption": "Reminder to call your teacher tomorrow",
+    "title": "Let's start. Remind me to call my teacher tomorrow."
+  },
+  {
+    "id": "0ae923e0-e71d-4129-9f53-9ff1bb5441eb",
+    "created_at": "2026-09-24 14:41",
+    "source_text": "Write a caption for my new product photo.",
+    "done": false,
+    "notion_page_id": "3e52d743-bb11-819d-a53e-d3365eabef51",
+    "intent": "summary",
+    "title": "Write a caption for a new product photo",
+    "priority": "high",
+    "action_platform": "notion",
+    "summary_or_caption": "Provide a short, helpful caption for a product photo. You can include product name, feature, benefits, or just a concise summary."
+  },
+  {
+    "id": "1f1b5a86-7b63-4ccc-a4b4-b9e51ec619b4",
+    "created_at": "2026-09-24 14:51",
+    "source_text": "and remind me to call my teacher tomorrow.",
+    "done": false,
+    "notion_page_id": "3e52d743-bb11-812b-b32a-cbf0e5236bb2",
+    "intent": "task",
+    "priority": "medium",
+    "action_platform": "trello",
+    "summary_or_caption": "remind the user to call their teacher tomorrow",
+    "title": "and remind me to call my teacher tomorrow."
   }
 ]

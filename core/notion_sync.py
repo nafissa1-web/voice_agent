@@ -7,7 +7,7 @@ Setup (one-time):
 2. Create a Notion database (a table) with these properties:
      - Name       -> Title
      - Priority   -> Select   (add options: High, Medium, Low)
-     - Intent     -> Select   (add options: task, content_creation, summary)
+     - Intent     -> Select   (add options: task, content_creation)
      - Status     -> Checkbox
 3. Open the database, click "..." -> "Connections" -> add your integration.
 4. Copy the database ID from its URL:
@@ -70,7 +70,7 @@ def push_to_notion(mission: dict):
     properties = {
         "Name": {"title": [{"text": {"content": mission.get("title", "Untitled")}}]},
         "Priority": {"select": {"name": mission.get("priority", "medium").capitalize()}},
-        "Intent": {"select": {"name": mission.get("intent", "summary")}},
+        "Intent": {"select": {"name": mission.get("intent", "task")}},
         "Status": {"checkbox": mission.get("done", False)},
     }
 
